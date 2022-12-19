@@ -9,7 +9,7 @@ function mergeSort(arr) {
   if (low < high) {
     const mid = Math.floor((low + high) / 2);
     const leftSort = mergeSort(arr.slice(0, mid + 1));
-    const rightSort = mergeSort(arr.slice(mid + 1));
+    const rightSort = mergeSort(arr.slice(mid - 1));
 
     return merge(leftSort, rightSort);
   }
